@@ -44,8 +44,8 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> searchProductByFilters(ProductoSearch productoSearch) {
-		// List<Product> lista = productRepository.searchByFilters(productoSearch.getDescription(),productoSearch.getPriceMax(),productoSearch.getPriceMin());
-		List<Product> lista = productRepository.searchByFilters(productoSearch.getPriceMax());
+		//List<Product> lista = productRepository.searchByFilters(productoSearch.getDescription(),productoSearch.getPriceMax(),productoSearch.getPriceMin());
+		List<Product> lista = productRepository.searchByFilters(productoSearch.getPriceMax(),"", "");
 		return lista;
 	}
 }
