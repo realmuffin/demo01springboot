@@ -1,0 +1,13 @@
+#logging.level.org.h2.server: DEBUG
+server:
+    port: 8080
+
+spring:
+    datasource:
+        driverClassName: org.h2.Driver        
+        url: jdbc:h2:file:~/h2/demo01db;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+        password:
+    jpa:
+      hibernate:
+        ddl-auto: update

@@ -1,0 +1,120 @@
+package pe.opm.springboot.demo01.repositories;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Stream;
+
+import pe.opm.springboot.demo01.domain.Product;
+
+public class ProductRepositoryImpl implements ProductRepository {
+
+	@Override
+	public <S extends Product> S save(S entity) {
+		// TODO Auto-generated method stub
+		
+		return save(entity);
+	}
+
+	@Override
+	public <S extends Product> Iterable<S> save(Iterable<S> entities) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean exists(Integer id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Iterable<Product> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<Product> findAll(Iterable<Integer> ids) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Product entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Iterable<? extends Product> entities) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Product> findByDescription(String description) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> findByProductId(String productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> findByPrice(BigDecimal price) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Stream<Product> findByDescriptionReturnStream(String description) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Stream<Product> findByProductIdReturnStream(String productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Stream<Product> findByPriceReturnStream(String price) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> searchByFilters(String description, BigDecimal priceMax, BigDecimal priceMin) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

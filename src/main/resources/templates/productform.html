@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework demo01</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+     <script src="./static/js/dragndrop.js"
+            th:src="@{/js/jcarousel.basic.js}"></script>
+            
+        <style type="text/css"> 
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+</style>     
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Product Details</h2>
+    <div>
+        <form class="form-horizontal" th:object="${product}" th:action="@{/product}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> ID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{id}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Product ID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{productId}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Description:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{description}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Price:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{price}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Image Url:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{imageUrl}"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Image Url 2:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{imageUrl2}"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Image Url 3:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{imageUrl3}"/>
+                </div>
+            </div>
+             
+             <div class="form-group">
+                <label class="col-sm-2 control-label">Image Url 4:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{imageUrl4}"/>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+            
+          
+      
+        </form>
+
+
+
+			<form action="#" method="GET" class="form demo_form">
+				<div class="upload fs-upload-element fs-upload fs-light"
+					data-upload-options='{"action":"https://formstone.it/demo/_extra/upload-target.php"}'>
+					<div class="fs-upload-target">Drag and drop files or click to
+						select</div>
+					<input class="fs-upload-input" type="file"/>
+				</div>
+				<div class="filelists">
+					<h5>Complete</h5>
+					<ol class="filelist complete">
+					</ol>
+					<h5>Queued</h5>
+					<ol class="filelist queue">
+					</ol>
+					<span class="cancel_all">Cancel All</span>
+				</div>
+			</form>
+
+
+
+
+
+
+		</div>
+</div>
+
+</body>
+</html>
